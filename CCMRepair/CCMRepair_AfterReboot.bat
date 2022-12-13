@@ -28,11 +28,11 @@ exit /B
 :gotPrivileges
 setlocal & pushd .
 cd /d %~dp0
-if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1) 
+if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 
 ::Kjører CCMRepair.exe
 ECHO Kjører CCMRepair.exe 
-:: c:\windows\ccm\ccmrepair.exe
+c:\windows\ccm\ccmrepair.exe
 
 :: Litt pause før den kjører alle handlingene sånn alt av handlinger rekker å komme inn.
 TIMEOUT 30

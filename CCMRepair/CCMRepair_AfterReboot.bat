@@ -35,7 +35,7 @@ ECHO Kjører CCMRepair.exe
 :: c:\windows\ccm\ccmrepair.exe
 
 :: Litt pause før den kjører alle handlingene sånn alt av handlinger rekker å komme inn.
-TIMEOUT 5
+TIMEOUT 30
 
 :: Kjører alle handlingene i Configuration Manager
 WMIC /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000121}"

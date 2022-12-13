@@ -1,7 +1,7 @@
 @echo off
 
 :: Flytter 2. halvdel av reperasjonen til startup mappen, for å fortsette etter restart.
-move "CCMRepair_AfterReboot.bat" "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
+xcopy "CCMRepair_AfterReboot.bat" "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\"
 TIMEOUT 1 
 
 :: Sjekker om filen har admin rettigheter, hvis ikke så får man en prompt om å logge seg inn.

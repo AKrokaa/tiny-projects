@@ -34,7 +34,7 @@ cd /d %~dp0
 if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1) 
 
 :: Kjører de to kommandoene som må kjøres før omstarten.
-net stop winmgmt
+net stop winmgmt /y
 winmgmt /resetrepository
 
 :: Når skriptet er ferdig, så restarter PCen etter 10 sekunder.

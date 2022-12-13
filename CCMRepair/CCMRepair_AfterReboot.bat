@@ -35,7 +35,7 @@ ECHO Kjører CCMRepair.exe
 c:\windows\ccm\ccmrepair.exe
 
 :: Litt pause før den kjører alle handlingene sånn alt av handlinger rekker å komme inn.
-TIMEOUT 30
+TIMEOUT 90
 
 :: Kjører alle handlingene i Configuration Manager
 WMIC /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000121}"
@@ -53,7 +53,7 @@ WMIC /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-
 WMIC /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000027}"
 WMIC /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000032}"
 
-:: Rydder opp etter seg selv, sletter 
-del "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CCMRepair_AfterReboot.bat") 
+:: Rydder opp etter seg selv, sletter seg selv.
+del "%~dp0/%CCMRepair_AfterReboot.bat"
 ECHO Programvaresenteret reparert.
 TIMEOUT 10
